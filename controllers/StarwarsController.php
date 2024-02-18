@@ -18,4 +18,17 @@ class StarwarsController {
         
         $this->view->viewCharacters($characters);
     }
+    
+    /**
+     * Mostrar los detalles
+     * 
+     * @param type $id
+     */
+    public function detailsCharacter($id) {
+        //$id = $_POST['character'];
+        
+        $character = $this->model->getCharacter($id);
+        
+        $this->view->viewDetails($character);
+    }
 }
