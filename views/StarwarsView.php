@@ -7,6 +7,7 @@ class StarwarsView {
      */
     public function viewCharacters($characters) {
         $character = json_decode($characters, true);
+        echo '<label for="personaje">Selecciona un personaje:</label>';
         echo '<select name="character" class="form-control">';
         echo '<option value="">Elige un personaje</option>';
         foreach ($character['results'] as $cha) {
